@@ -15,12 +15,6 @@ public class UIManager : MonoBehaviour
         UpdateCombo(0);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void UpdateScore(int score)
     {
         scoreText.text = "Score: " + score;

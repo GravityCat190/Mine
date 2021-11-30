@@ -11,8 +11,8 @@ class BombTarget : Target
     public override void GetHit()
     {
         Debug.Log("Bomb!");
-        LifeManager.LoseLife();
-        ComboManager.resetCombo();
+        LineManager.LoseLife();
+        LineManager.ResetCombo();
         base.Die();
     }
 }

@@ -5,14 +5,12 @@ using UnityEngine;
 public class PointsManager : MonoBehaviour
 {
     private int score;
-    private UIManager UIManager;
-    private ComboManager ComboManager;
+    [SerializeField] private UIManager UIManager;
+    [SerializeField] private ComboManager ComboManager;
     // Start is called before the first frame update
     void Start()
     {
         score = 0;
-        UIManager = GameObject.Find("Game Manager").GetComponent<UIManager>();
-        ComboManager = GameObject.Find("Game Manager").GetComponent<ComboManager>();
     }
 
     public void UpdateScore(int scoreToAdd)

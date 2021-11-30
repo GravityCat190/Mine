@@ -11,7 +11,7 @@ class LifeTarget : Target
     public override void GetHit()
     {
         Debug.Log("Extra Life!");
-        LifeManager.GetLife();
+        LineManager.GetLife();
         base.Die();
     }
 }

@@ -9,17 +9,18 @@ public class LifeManager : MonoBehaviour
     private int maxLife = 3;
     private int minLife = 0;
 
-    private UIManager UIManager;
-    
+    [SerializeField]  private UIManager UIManager;
+    [SerializeField] private ComboManager ComboManager;
+
     // Start is called before the first frame update
     void Start()
     {
         life = 3;
-        UIManager = GameObject.Find("Game Manager").GetComponent<UIManager>();
     }
     public void LoseLife()
     {
         life = life - 1;
+        ComboManager.ResetCombo();
         UIManager.UpdateLife(life);
         if (life == minLife)
         {

@@ -6,12 +6,7 @@ public class MoveLine : MonoBehaviour
 {
     bool isMovingRight = true;
     public float speed;
-    private ComboManager ComboManager;
-
-    private void Start()
-    {
-        ComboManager = GameObject.Find("Game Manager").GetComponent<ComboManager>();
-    }
+    [SerializeField] private LineManager LineManager;
 
     // Update is called once per frame
     void Update()
@@ -45,7 +40,7 @@ public class MoveLine : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Boundry"))
         {
-            ComboManager.resetCombo();
+            LineManager.ResetCombo();
             ChangeDirection();
         }    
     }

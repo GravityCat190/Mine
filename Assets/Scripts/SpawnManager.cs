@@ -6,7 +6,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField] List<GameObject> targetPrefabs = new List<GameObject>();
-    private float xSpawnRange = 4.5f;
+    private float xSpawnRange = 3.5f;
     private float ySpawnRange = 1.5f;
     [SerializeField] float spawnInterval;
 

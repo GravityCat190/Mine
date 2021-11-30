@@ -4,7 +4,7 @@ using UnityEngine;
 
 class CriticalTarget : Target
 {
-    public override void Start()
+    public void Start()
     {
         base.Start();
         base.SetPoints();
@@ -13,8 +13,8 @@ class CriticalTarget : Target
     {
         points = points * 2;
         Debug.Log("Critical!");
-        PointsManager.UpdateScore(points);
-        ComboManager.increaseCombo(2);
+        LineManager.UpdateScore(points);
+        LineManager.IncreaseCombo(2);
         base.Die();
     }
 }

@@ -4,15 +4,15 @@ using UnityEngine;
 
 class NormalTarget : Target
 {
-    public override void Start()
+    public void Start()
     {
         base.Start();
         base.SetPoints();
     }
     public override void GetHit()
     {
-        PointsManager.UpdateScore(points);
-        ComboManager.increaseCombo(1);
+        LineManager.UpdateScore(points);
+        LineManager.IncreaseCombo(1);
         base.Die();
     }
 }

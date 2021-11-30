@@ -309,7 +309,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111381605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0625957, y: -3.1137352, z: -4.343808}
+  m_LocalPosition: {x: -2.1, y: -3.1137352, z: -4.343808}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1217962709}
@@ -478,6 +478,7 @@ GameObject:
   - component: {fileID: 1430035757}
   - component: {fileID: 1430035756}
   - component: {fileID: 1430035755}
+  - component: {fileID: 1430035758}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -529,6 +530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCombo: 0
+  UIManager: {fileID: 1430035753}
 --- !u!114 &1430035756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,6 +543,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a45de0e37dc062b42b490d6f09022848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UIManager: {fileID: 1430035753}
+  ComboManager: {fileID: 1430035755}
 --- !u!114 &1430035757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -553,6 +557,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 102a391ac506b754898d89d5ff61c2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UIManager: {fileID: 1430035753}
+  ComboManager: {fileID: 1430035755}
+--- !u!114 &1430035758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430035752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7999720ec2bc02742accfb36fdf75cc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ComboManager: {fileID: 1430035755}
+  LifeManager: {fileID: 1430035757}
+  PointsManager: {fileID: 1430035756}
 --- !u!1 &1446042429
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,7 +649,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446042429}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 4, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1052,7 +1073,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810095416}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.7, y: 0, z: 0}
+  m_LocalPosition: {x: 3.8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1171,10 +1192,10 @@ GameObject:
   - component: {fileID: 1967014616}
   - component: {fileID: 1967014615}
   - component: {fileID: 1967014614}
-  - component: {fileID: 1967014619}
   - component: {fileID: 1967014618}
   - component: {fileID: 1967014617}
-  - component: {fileID: 1967014620}
+  - component: {fileID: 1967014621}
+  - component: {fileID: 1967014619}
   m_Layer: 0
   m_Name: Line
   m_TagString: Untagged
@@ -1195,6 +1216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  LineManager: {fileID: 1430035758}
 --- !u!212 &1967014615
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1315,10 +1337,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1967014613}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6972f8a732c5bb246b645c90f0182ddd, type: 3}
+  m_Script: {fileID: 11500000, guid: 334235279ffb1524886192d4f9e1a76f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1967014620
+  moveLineScript: {fileID: 1967014614}
+  lineBlinkScript: {fileID: 1967014621}
+  LineManager: {fileID: 1430035758}
+--- !u!114 &1967014621
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1327,7 +1352,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1967014613}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caae5e926881a5c44b581b6c7bcf6530, type: 3}
+  m_Script: {fileID: 11500000, guid: 791189c31f55e2a45972c9c9de6f37ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   changetime: 0.15
@@ -1433,7 +1458,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132975009}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.7, y: 0, z: 0}
+  m_LocalPosition: {x: -3.8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
