@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3152203006880381766}
   - component: {fileID: 3152203006880381763}
   - component: {fileID: 8093158560634531983}
+  - component: {fileID: -7813716608732824070}
   m_Layer: 10
   m_Name: Normal Target
   m_TagString: Target
@@ -122,6 +123,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 0
-  GameManager: {fileID: 0}
+  LineManager: {fileID: 0}
   DieExplosion: {fileID: 7535607469619513247, guid: ac10190cf200c4f7e881ca8e41d3d760,
     type: 3}
+--- !u!114 &-7813716608732824070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3152203006880381767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5b4d8977842d4495a74efdf63299158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 8

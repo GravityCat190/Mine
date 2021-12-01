@@ -531,6 +531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCombo: 0
   UIManager: {fileID: 1430035753}
+  maxCombo: 20
 --- !u!114 &1430035756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1386,12 +1387,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb2344e864999045903fbc2fa0f7e30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnInterval: 1
   targetPrefabs:
   - {fileID: 3152203006880381767, guid: 4206fbdd655561348810c9735061d804, type: 3}
   - {fileID: 3152203006880381767, guid: 6fa635d3893055d4f876608f43fcef3f, type: 3}
   - {fileID: 3152203006880381767, guid: aa0794a10b1d2bb47b57ea339c7ed3d8, type: 3}
   - {fileID: 3152203006880381767, guid: 1c001297b69a9d346bc8acf0a051d13b, type: 3}
-  spawnInterval: 1
+  ComboManager: {fileID: 1430035755}
+  maxTargetAmount: 30
 --- !u!4 &2054140947
 Transform:
   m_ObjectHideFlags: 0

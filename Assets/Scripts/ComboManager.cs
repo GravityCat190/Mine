@@ -6,6 +6,7 @@ public class ComboManager : MonoBehaviour
 {
     public int currentCombo;
     [SerializeField] private UIManager UIManager;
+    [SerializeField] private int maxCombo;
 
     private void Start()
     {
@@ -19,7 +20,7 @@ public class ComboManager : MonoBehaviour
 
     public void IncreaseCombo(int amount)
     {
-        currentCombo += amount;
+        currentCombo = Mathf.Min(currentCombo + amount, maxCombo);
         UIManager.UpdateCombo(currentCombo);
     }
 
